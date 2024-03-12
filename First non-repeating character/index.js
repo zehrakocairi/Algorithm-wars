@@ -21,5 +21,4 @@ function firstNonRepeatingLetter(s) {
   }
   return "";
 }
-
 console.log(firstNonRepeatingLetter(""));
