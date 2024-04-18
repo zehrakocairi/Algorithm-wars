@@ -7,7 +7,8 @@
 
 function primeFactors(n) {
   let multipiers = [];
-  var temp = n;
+  let temp = n;
+
   for (let i = 2; i <= n; ) {
     if (temp % i === 0) {
       multipiers[i] = multipiers[i] == null ? 1 : multipiers[i] + 1;
@@ -17,9 +18,11 @@ function primeFactors(n) {
       n = temp;
     }
   }
+
   if (multipiers.length === 0) {
     return `(${n})`;
   }
+
   let expression = "";
   for (let i = 0; i < multipiers.length; i++) {
     if (multipiers[i] > 0) {
@@ -29,15 +32,4 @@ function primeFactors(n) {
   return expression;
 }
 
-function isPrime(number) {
-  if (number < 2) {
-    return false;
-  }
-  for (let i = 2; i < Math.sqrt(number); i++) {
-    if (number % i === 0) {
-      return false;
-    }
-  }
-
-  return true;
-}
+console.log(primeFactors(86240));
